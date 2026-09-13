@@ -1,0 +1,145 @@
+:root{
+  --bg:#0b1018; --panel:#141b26; --panel2:#1b2533; --text:#f5f7fb;
+  --muted:#9eacbf; --line:#2a3648; --accent:#7da7ff; --accent2:#a8c4ff;
+  --good:#58d69a; --bad:#ff7885; --warn:#ffd166;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{
+  margin:0; min-height:100vh; color:var(--text);
+  background:
+    radial-gradient(circle at 20% -10%, rgba(71,108,174,.24), transparent 36rem),
+    linear-gradient(180deg,#0a0f17 0%,#101722 100%);
+  font-family:system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;
+}
+button,select,input,textarea{font:inherit}
+button{touch-action:manipulation}
+.app{max-width:940px;margin:0 auto;padding:24px 14px 48px}
+.card{
+  background:rgba(20,27,38,.96); border:1px solid var(--line); border-radius:22px;
+  padding:24px; box-shadow:0 18px 55px rgba(0,0,0,.32);
+}
+.hero{text-align:center;padding:8px 0 4px}
+.heroMark{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:7px 12px;border:1px solid #34445c;border-radius:999px;
+  color:#c8d5ea;background:#111925;font-size:13px;margin-bottom:14px
+}
+h1{
+  font-size:clamp(28px,5.5vw,46px);line-height:1.16;letter-spacing:.02em;
+  margin:0;color:#fff
+}
+.heroSub{margin:12px auto 0;max-width:720px;color:var(--muted);line-height:1.7;font-size:15px}
+.summary{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+  margin:22px 0 20px
+}
+.summaryItem{
+  background:#101720;border:1px solid var(--line);border-radius:14px;
+  padding:13px 10px;text-align:center;color:var(--muted);font-size:13px
+}
+.summaryItem strong{display:block;color:#fff;font-size:22px;margin-bottom:2px}
+.sectionTitle{font-size:14px;font-weight:800;color:#c9d5e7;margin:6px 0 10px}
+.grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px
+}
+.field{
+  background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:14px
+}
+.field label{
+  display:block;font-size:12px;font-weight:750;color:var(--muted);
+  margin-bottom:7px;letter-spacing:.04em
+}
+select{
+  width:100%;background:#0f1620;color:var(--text);
+  border:1px solid #37465b;border-radius:10px;padding:11px 12px
+}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.setupActions{justify-content:center;margin-top:22px}
+button{
+  border:0;border-radius:12px;padding:11px 16px;background:#293548;color:white;
+  cursor:pointer;transition:.16s transform,.16s opacity,.16s background
+}
+button:hover{transform:translateY(-1px)}
+button.primary{
+  min-width:190px;background:linear-gradient(180deg,#90b3ff,#719df9);
+  color:#08111f;font-weight:900
+}
+button.danger{background:#74313a}
+button.ghost{background:transparent;border:1px solid #44536b;color:#d5ddea}
+button.subtle{background:transparent;color:#8998ad;padding:9px 12px;font-size:13px}
+button:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.note{
+  margin-top:14px;padding:12px 14px;border-radius:12px;background:#0f1620;
+  border:1px solid #2b3748;color:#cad3df;font-size:14px;line-height:1.65
+}
+.pill{
+  display:inline-flex;align-items:center;gap:6px;border:1px solid #3b495e;
+  border-radius:999px;padding:5px 9px;color:#cad4e3;font-size:12px;background:#111925
+}
+.examTop{
+  display:flex;gap:12px;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;margin-bottom:12px
+}
+.progressWrap{height:8px;background:#0d131c;border-radius:99px;overflow:hidden;margin:10px 0 16px}
+.progressBar{height:100%;background:linear-gradient(90deg,#6f9cff,#a7c3ff);width:0;transition:.2s}
+.meta{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin:8px 0 12px}
+.questionCard{
+  background:#f7f9fc;color:#111722;border-radius:18px;padding:24px;min-height:175px;
+  display:flex;flex-direction:column;justify-content:center;gap:12px;
+  box-shadow:inset 0 0 0 1px #e3e8ef
+}
+.questionText{
+  font-size:clamp(20px,3.7vw,29px);line-height:1.55;font-weight:850;letter-spacing:.015em
+}
+.sourceTools{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.optionRow{display:grid;grid-template-columns:1fr;gap:10px;margin-top:16px}
+.opt{
+  padding:15px 16px;font-size:17px;font-weight:750;background:#202a39;
+  border:2px solid transparent;text-align:left;line-height:1.5
+}
+.opt .letter{
+  display:inline-flex;justify-content:center;align-items:center;min-width:31px;height:31px;
+  margin-right:10px;border-radius:9px;background:#0e151f;color:#dce5f2
+}
+.opt.selected{background:#263c63;border-color:var(--accent)}
+.opt.selected .letter{background:var(--accent);color:#0b1a33}
+.seqBox{
+  display:flex;gap:8px;flex-wrap:wrap;min-height:44px;align-items:center;padding:10px 12px;
+  background:#0f1620;border:1px solid var(--line);border-radius:12px;margin-top:14px
+}
+.seqToken{background:#29446f;border-radius:8px;padding:6px 10px;font-weight:800}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
+.nav .right{display:flex;gap:10px}
+.qgrid{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin-top:14px}
+.qdot{padding:7px 0;border-radius:8px;font-size:12px;background:#202a38}
+.qdot.answered{background:#314565}
+.qdot.current{outline:2px solid var(--accent)}
+.score{font-size:64px;font-weight:950;line-height:1}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
+.stat{background:#101720;border-radius:12px;padding:12px;text-align:center;border:1px solid var(--line)}
+.stat strong{display:block;font-size:26px}
+.reviewItem{border-top:1px solid var(--line);padding:16px 0}
+.reviewQuestion{font-size:18px;font-weight:800;line-height:1.55;margin:7px 0}
+.reviewChoices{color:#c4cbd5;line-height:1.65;font-size:14px}
+details{margin-top:10px}
+summary{cursor:pointer;color:#b9c9e5}
+.good{color:var(--good)} .bad{color:var(--bad)} .warn{color:var(--warn)}
+.hidden{display:none!important}
+.editHint{font-size:12px;color:#8f9aac}
+.footerTools{display:flex;justify-content:center;margin-top:8px}
+@media(max-width:680px){
+  .app{padding:12px 10px 30px}
+  .card{padding:16px;border-radius:16px}
+  .hero{padding-top:4px}
+  .summary{grid-template-columns:repeat(3,1fr);gap:7px}
+  .summaryItem{padding:10px 6px}
+  .summaryItem strong{font-size:19px}
+  .grid{grid-template-columns:1fr}
+  .questionCard{padding:18px}
+  .opt{font-size:16px}
+  .qgrid{grid-template-columns:repeat(8,1fr)}
+  .score{font-size:52px}
+  .stats{grid-template-columns:1fr 1fr 1fr}
+}
